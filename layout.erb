@@ -6,10 +6,7 @@
     <title><%= title ||= "l33tname" %></title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <style type="text/css">
-        html, body {
-            height: 100%;
-            background-color: white;
-        }
+        html, body {height: 100%;background-color: #FFFFFF; color: #1A1A18;}
         .wrapper {
             min-height: 100%;
             height: auto !important;
@@ -17,18 +14,11 @@
             margin: 0 auto -153px; /*negative von footer height*/
         }
         .footer, .push { height: 153px;} /*muss gleich gross sein wie footer*/ 
-        .pure-u-1-3-c > a {color: #79201E;}
-        a {
-            color: #A10300;
-            outline: medium none;
-            text-decoration: none;
-        }
-        a:hover, a:focus {
-            text-decoration: underline;
-        }
-        .banner { background: url('/img/header.jpg') no-repeat fixed 0 0 / cover black; display: table; height: 350px; margin-bottom: 5px; text-align: center; width: 100%;}
-        .banner-head { color: white;display: table-cell; font-size: 4em; font-weight: 500; margin-bottom: 0; text-shadow: 0 1px 1px black; vertical-align: middle;}
-        .footer {background-color: #181818; color: #888888; font-size: 16px; }
+        a {color: #A10300; outline: medium none; text-decoration: none;}
+        a:hover, a:focus {text-decoration: underline;}
+        .banner { background: url('/img/header.jpg') no-repeat fixed 0 0 / cover #1A1A18; display: table; height: 350px; margin-bottom: 5px; text-align: center; width: 100%;}
+        .banner-head { color: #FFFFFF; display: table-cell; font-size: 4em; font-weight: 500; margin-bottom: 0; text-shadow: 0 1px 1px #1A1A18; vertical-align: middle;}
+        .footer {background-color: #1A1A18; color: #C7C4C1; font-size: 16px; }
         .pure-u-1-3 {width: 33.33%;}
         .pure-u-1-3-c {padding: 0px 15px;}
         .pure-u-1-3-c h5 {text-align: center;}
@@ -39,12 +29,22 @@
         .form input { margin-bottom: 10px;}
         .form textarea { margin-bottom: 10px; height: 100px;}
         p {margin-top: 8px; margin-bottom: 0px;}
-        .aUnstyle {text-decoration: none; color: white;}
+        .aUnstyle {text-decoration: none; color: #FFFFFF;}
+        .top-banner{background-color: #C7C4C1; height: 25px;}
+        .top-banner a {color: #6B0900;}
+        .pure-menu li a {padding-top: 0px;}
     </style>
 </head>
 <body>
 
 <div class="wrapper">
+    <div class="pure-menu pure-menu-open pure-menu-horizontal top-banner">
+        <ul>
+            <li><a href="http://l33t.name">About</a></li>
+            <li><a href="http://blog.l33t.name">Blog</a></li>
+            <li><a href="http://movie.l33t.name">Filme</a></li>
+        </ul>
+    </div>
     <div class="banner">
         <h1 class="banner-head">
             <a href="/" class="aUnstyle"><%= title ||= "l33tname" %></a><br>

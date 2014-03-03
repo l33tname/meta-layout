@@ -54,6 +54,7 @@
     <div class="container pure-g-r">
         <%= yield %>
     </div>
+    <%= (erb :tracking, :layout => nil) if File.file? File.join(settings.root, "views", "tracking.erb") %>
     <div class="push"></div>
 </div>
 
